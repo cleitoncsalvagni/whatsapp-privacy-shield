@@ -62,13 +62,11 @@ function processMessages() {
   for (const selector of possibleSelectors) {
     messages = document.querySelectorAll(selector);
     if (messages.length > 0) {
-      console.log(`Using selector "${selector}" to find messages.`);
       break;
     }
   }
 
   if (messages.length === 0) {
-    console.log("No message elements found. Checking again in 2 seconds...");
     setTimeout(processMessages, 2000);
     return;
   }
@@ -109,8 +107,6 @@ function processMessages() {
       messageElement.textContent = shuffledText;
     });
   });
-
-  console.log("Message processing completed!");
 }
 
 /**
@@ -124,8 +120,6 @@ function initObserver() {
 
     if (chatContainer) {
       clearInterval(checkContainer);
-      console.log("Chat container found!");
-
       processMessages();
 
       const observer = new MutationObserver((mutations) => {
@@ -136,10 +130,6 @@ function initObserver() {
         childList: true,
         subtree: true,
       });
-
-      console.log("Mutation observer started!");
-    } else {
-      console.log("Waiting for chat container to load...");
     }
   }, 1000);
 }
@@ -166,9 +156,6 @@ function checkWhatsAppStructure() {
   }
 
   if (issues.length > 0) {
-    console.warn("Possible changes in WhatsApp Web structure detected:");
-    issues.forEach((p) => console.warn(p));
-
     chrome.runtime
       .sendMessage({
         action: "structureChanged",
@@ -191,5 +178,3 @@ if (document.readyState === "loading") {
   initObserver();
   checkWhatsAppStructure();
 }
-
-console.log("WhatsApp Message Obfuscator started!");
