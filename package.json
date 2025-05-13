@@ -1,0 +1,29 @@
+{
+  "name": "whatsapp-privacy-shield",
+  "version": "1.0.0",
+  "description": "Browser extension that enhances privacy on WhatsApp Web by obfuscating message previews",
+  "main": "content.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pack": "mkdir -p dist && zip -r dist/whatsapp-privacy-shield.zip manifest.json *.js *.css *.html icons/ README.md LICENSE -x \"**/.*\""
+  },
+  "keywords": [
+    "whatsapp",
+    "privacy",
+    "chrome-extension",
+    "browser-extension"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleitoncsalvagni/whatsapp-privacy-shield.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cleitoncsalvagni/whatsapp-privacy-shield/issues"
+  },
+  "homepage": "https://github.com/cleitoncsalvagni/whatsapp-privacy-shield#readme",
+  "devDependencies": {
+    "eslint": "^8.45.0"
+  }
+}

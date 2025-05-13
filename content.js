@@ -1,5 +1,5 @@
 /**
- * WhatsApp Message Obfuscator
+ * WhatsApp Privacy Shield
  * This script obfuscates the last message of each chat and reveals it on hover.
  */
 
