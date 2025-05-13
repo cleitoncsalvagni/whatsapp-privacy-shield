@@ -1,0 +1,7 @@
+.obfuscated-message {
+  transition: color 0.3s ease-in-out;
+}
+
+[role="listitem"]:hover .obfuscated-message {
+  color: inherit !important;
+}

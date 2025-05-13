@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Message Obfuscator</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 15px;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 16px;
+        color: #128c7e; /* WhatsApp green color */
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+
+      .status {
+        padding: 10px;
+        background-color: #e6f7ef;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #128c7e;
+      }
+
+      #alert-container {
+        display: none;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff9c4;
+        border: 1px solid #fbc02d;
+      }
+
+      .alert {
+        font-size: 13px;
+        color: #ff6f00;
+      }
+
+      .alert ul {
+        margin-top: 5px;
+        padding-left: 20px;
+      }
+
+      .alert button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #128c7e;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .alert button:hover {
+        background-color: #0d7265;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WhatsApp Message Obfuscator</h1>
+    <p>
+      This extension obfuscates the last messages in WhatsApp Web. Hover over a
+      chat to view the original message.
+    </p>
+    <div class="status">Active ✓</div>
+    <div id="alert-container"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
